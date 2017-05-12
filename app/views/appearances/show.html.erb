@@ -1,0 +1,9 @@
+<h3> Appearances by <%= @guest.name %> <h3>
+
+<% @appearances.each do |appearance| %>
+  Episode Date: <%= appearance.episode.date %> <br>
+  Rating (click to edit): <%= link_to appearance.rating, edit_appearance_path(appearance) %> <br>
+  <br>
+<% end %>
+
+<%= link_to "Back to All Guests", guests_path %>
